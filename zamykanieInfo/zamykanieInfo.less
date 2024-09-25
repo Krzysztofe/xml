@@ -1,0 +1,49 @@
+._ae_desc_close {
+  @media (max-width: 757px) {
+    height: 15rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 50%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+}
+
+.main_cms2_buttons {
+  position: relative;
+}
+.main_cms2_button {
+  font-family: Inter;
+  display: none;
+  margin: auto;
+  margin-bottom: 3rem;
+
+  @media (min-width: 757px) {
+    display: none;
+  }
+}
+
+.main_cms2_button--print {
+  display: block;
+  @media (min-width: 757px) {
+    display: none;
+  }
+}
+
+.main_cms2_button_arrow {
+  display: inline-block;
+  position: absolute;
+  left: 39.5rem;
+  top: 0;
+  transform: rotate(0deg);
+  width: 1.5rem;
+  height: 1.5rem;
+  mask: url("/data/include/cms//chevron-down-solid.svg");
+  background-color: black;
+  transition: transform 0.3s;
+}
+
+.main_cms2_button_arrow-bottom {
+  transform: rotate(180deg);
+}
