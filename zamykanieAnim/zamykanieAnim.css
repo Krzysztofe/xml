@@ -1,0 +1,88 @@
+.main_cms_header {
+    color: #000;
+     font-size: 1.8rem;
+     font-weight: 600;
+     line-height: 130%;
+     margin-bottom: 1.2rem !important;
+     margin-top: 2.4rem !important
+ }
+ 
+ .main_cms_top_description {
+     @media (max-width: 757px) {
+     mask-image: linear-gradient(
+       to bottom,
+       rgba(0, 0, 0, 1) 50%,
+       rgba(0, 0, 0, 0) 100%
+     );
+   }
+ }
+ 
+ .main_cms_top_description--shadow-remove {
+     @media (max-width: 757px) {
+     mask-image: none
+   }
+ }
+ 
+ 
+ .main_cms_wrapper {
+ display: grid;
+ transition: grid-template-rows 0.3s;
+ 
+   @media (max-width: 757px) {
+    grid-template-rows: 0fr;
+   }
+ }
+ 
+ .main_cms_wrapper--print {
+       @media (max-width: 757px) {
+      grid-template-rows: 1fr;
+    transition: grid-template-rows 0.3s;
+   }
+ }
+ 
+ .main_cms_bottom_description {
+  overflow: hidden; 
+ }
+ 
+ 
+ 
+ .main_cms2_buttons {
+   position: relative;
+   width: fit-content;
+   margin:auto;
+ }
+ .main_cms2_button {
+   font-family: Inter;
+   display: none;
+   margin: auto;
+   margin-bottom: 3rem;
+ 
+   @media (min-width: 757px) {
+     display: none;
+   }
+ }
+ 
+ .main_cms2_button--print {
+   display: block;
+   @media (min-width: 757px) {
+     display: none;
+   }
+ }
+ 
+ .main_cms2_button_arrow {
+   display: inline-block;
+   position: absolute;
+   left: 110%;
+   top: 0;
+   transform: rotate(0deg);
+   width: 1.5rem;
+   height: 1.5rem;
+   mask: url("/data/include/cms//chevron-down-solid.svg");
+   background-color: black;
+   transition: transform 0.3s;
+ }
+ 
+ .main_cms2_button_arrow-bottom {
+   transform: rotate(180deg);
+ }
+ 

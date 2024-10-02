@@ -115,6 +115,8 @@ strzałka
                           <iaixsl:value-of disable-output-escaping="yes" select="@title"/>
                         </a>
                       </iaixsl:when>
+<!-- warunek -->
+                      <iaixsl:if test="count(/shop/page/projector/blog_entries/item) &gt; 0">
 
 <!-- dodawanie atrybutów do elementu  -->
        <div class="product__buy-section" data-id="67186">
