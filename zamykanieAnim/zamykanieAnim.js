@@ -23,3 +23,6 @@ if (btnShowEl && btnCloseEl && arrowEl && topDescriptionEL && mainWrapperEl) {
   btnShowEl.addEventListener("click", () => toggleInfo(true));
   btnCloseEl.addEventListener("click", () => toggleInfo(false));
 }
+
+
+

@@ -70,7 +70,7 @@
           </iaixsl:when>
           
 
-strzałka
+<!-- strzałka -->
         <li>
                   <iaixsl:attribute name="class"><![CDATA[bc-active bc-]]><iaixsl:value-of select="page/@type"/></iaixsl:attribute>
                   <span></span>
@@ -97,6 +97,16 @@ strzałka
     </div>
 </a>
 
+<!-- wyciąganie xml do xslt -->
+
+    <div class="newsletter_2">
+    
+        <iaixsl:value-of select="/shop/language/@name"></iaixsl:value-of> 
+        
+          
+      </div>
+
+
 
 <!-- literal -->
 
@@ -115,8 +125,6 @@ strzałka
                           <iaixsl:value-of disable-output-escaping="yes" select="@title"/>
                         </a>
                       </iaixsl:when>
-<!-- warunek -->
-                      <iaixsl:if test="count(/shop/page/projector/blog_entries/item) &gt; 0">
 
 <!-- dodawanie atrybutów do elementu  -->
        <div class="product__buy-section" data-id="67186">
@@ -129,6 +137,10 @@ strzałka
 <!-- dowawanie klasy -->
 
         <iaixsl:attribute name="class"> <![CDATA[eeeeee]]></iaixsl:attribute>
+
+<!-- wyciąganie xml do html -->
+
+<li><template><iaixsl:copy-of select="/shop/action_alert"></iaixsl:copy-of></template></li>
 
 
 <!-- dodawanie klasy warunkowo -->
@@ -179,3 +191,33 @@ strzałka
             </ul>
       </section>
     </iaixsl:if>
+
+<!-- warunki językowe -->
+          
+      <div class="newsletter_2">
+    
+        <iaixsl:if test="/shop/language/@id = 'pol'">
+            <img src="/data/include/cms/footer-eBook-tlumaczenie/PL.png" loading="lazy"/>
+        </iaixsl:if>
+              
+       <iaixsl:if test="/shop/language/@id = 'cze'">
+           <img src="/data/include/cms/footer-eBook-tlumaczenie/CZ.png" loading="lazy"/>
+       </iaixsl:if>
+       
+        <iaixsl:if test="/shop/language/@id = 'eng'">
+           <img src="/data/include/cms/footer-eBook-tlumaczenie/EN.png" loading="lazy"/>
+       </iaixsl:if>
+       
+        <iaixsl:if test="/shop/language/@id = 'ukr'">
+           <img src="/data/include/cms/footer-eBook-tlumaczenie/UKR.png" loading="lazy"/>
+       </iaixsl:if>
+       
+       <iaixsl:if test="/shop/language/@id = 'fre'">
+           <img src="/data/include/cms/footer-eBook-tlumaczenie/FR.png" loading="lazy"/>
+       </iaixsl:if>
+       
+       <iaixsl:if test="/shop/language/@id = 'ger'">
+           <img src="/data/include/cms/footer-eBook-tlumaczenie/DE.png" loading="lazy"/>
+       </iaixsl:if>
+    
+      </div>
